@@ -106,7 +106,6 @@ public class OpenQuestionTarget implements QuestionGenerationTarget<OpenAnswerQu
      */
     private AnswerData constructAnswerData(JsonObject answerObject) throws JsonIOException {
         JsonObject answer = answerObject.getAsJsonObject(StringConstants.Answers.ANSWERS_NAME);
-
         return new AnswerData(
                 TextAnswer.class.getName(),
                 answer.get(StringConstants.Answers.ANSWER_TEXT).getAsString(),
@@ -126,7 +125,6 @@ public class OpenQuestionTarget implements QuestionGenerationTarget<OpenAnswerQu
             throws JsonIOException {
         JsonObject question =
                 questionObject.getAsJsonObject(StringConstants.Questions.QUESTIONS_NAME);
-
         return new QuestionData(
                 QuestionType.OPEN_ANSWER.toString(),
                 question.get(StringConstants.Questions.QUESTION_TEXT).toString(),

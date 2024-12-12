@@ -94,7 +94,6 @@ public abstract class QuizzMaker {
         type =
                 StringUtils.validateAnswerTypeString(type)
                         .orElseGet(AnswerTypes.BOOLEAN_ANSWER::toString);
-
         if (type.equals(AnswerTypes.BOOLEAN_ANSWER.toString())) {
             answer = BOOLEAN_ANSWER_FACTORY.create(data);
         } else if (type.equals(AnswerTypes.TEXT_ANSWER.toString())) {

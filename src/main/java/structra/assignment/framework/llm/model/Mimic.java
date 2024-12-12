@@ -252,7 +252,10 @@ public class Mimic implements MachineLearningModel {
                         .get(random.nextInt(maxSize))
                         .toString();
             } else {
-                return json.get(NONSENSE).getAsJsonArray().get(random.nextInt(maxSize)).toString();
+                return json.get(NONSENSE)
+                        .getAsJsonArray()
+                        .get(random.nextInt(maxSize))
+                        .toString();
             }
         } else {
             throw new RuntimeException("Failed to generate question");

@@ -58,7 +58,6 @@ public class MultiCheckBoxQuestionFactory implements QuestionFactory {
         for (AnswerData answer : data.getAnswers()) {
             answers.add((BooleanAnswer) QuizzMaker.createAnswer(answer));
         }
-
         return new MultiCheckboxQuestion(
                 (float) data.getDifficulty(),
                 data.getText(),
